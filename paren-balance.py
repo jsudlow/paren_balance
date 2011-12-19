@@ -18,9 +18,13 @@ with open('./program_test.py', 'r') as f:
 #iterate over the lines and perform stack pushing/popping logic. If the stack gets 'popped off' meaning the amount of elements in stack is 0 and a POP attempt occurs, then you know an imbalance has occured.
 #the program breaks from the loop and prints out the line number and the data around the error to give the user a reference
 for lineno,char in enumerate(lines):
-    if char == '(':
+    match = 'no-match'
+    opens = '([{'
+    if char in opens:
         stack.push(char)
-    if char == ')':
+        
+    closes = ')]}'
+    if char in closes:
         char_returned = stack.pop()
         if char_returned == 'god-signal':
            print "Char Number in string: ", lineno,char 

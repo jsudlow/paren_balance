@@ -1,0 +1,3 @@
+This program uses a stack data structure. It is implmented as a class using the python list data type. 
+
+Paren Balance uses the stack to see if your code is properly balanced. If your program is not balanced a warning occurs. If it is balanced nothing happens, as they say no news is good news.
